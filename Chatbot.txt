@@ -1,0 +1,43 @@
+using System.Diagnostics.Eventing.Reader;
+
+namespace Chatbot
+{
+
+    internal class Program
+    {
+        static void Main(string[] args)
+
+        {
+            Console.WriteLine("Hello! I'm your friendly Chatbot!");
+            while (true)
+            {
+                Console.Write("\nYou: ");
+                string userInput = Console.ReadLine().ToLower();
+
+                if (userInput.Contains("hello") || userInput.Contains("hi"))
+                {
+                    Console.WriteLine("Hello! How can I assist You today?");
+                }
+                else if (userInput.Contains("how are you"))
+                {
+                    Console.WriteLine("Chatbot: I'm just bunch of code ");
+                }else if (userInput.Contains("your name"))
+                {
+                    Console.WriteLine("Chatbot: I'm Chatbot! your friend");
+                }else if (userInput.Contains("bye"))
+                {
+                    Console.WriteLine("Chatbot: Goodbye! Have a great day!");
+                    break;
+
+                }
+                else
+                {
+                    Console.WriteLine("Chatbot: Sorry I can't understand that! Can you ask something else");
+
+                }
+            }
+            Console.ReadLine();
+        }   
+
+    }
+}
